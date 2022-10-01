@@ -1,0 +1,27 @@
+
+.location{
+  background-color: #EAEAEA;
+  display: flex;
+  justify-content: center;
+}
+
+.form{
+  height:100px;
+  display:flex;
+  justify-content:center;
+}
+.location_bar{
+  text-align: center;
+  border:none;
+  background-color: #EAEAEA;
+  height: 35px;
+}
+
+.about{
+  padding: 20px 34px 60px 34px;
+  text-align: center;
+  background-color:#F6F6F6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

@@ -1,8 +1,7 @@
 footer{
   background-color:#353535;
   color:#FFFFFF;
-  list-style-type:none;
-
+  margin-top: -40px;
 }
 
 ul{
@@ -12,17 +11,15 @@ ul{
 
 li{
   list-style-type:none;
-  margin-bottom: 5px;
-  padding-bottom: 15px;
+  padding-bottom: 11px;
 }
 
-li h2{
+li h3{
   font-family: 'Shrikhand', cursive;
   margin:0;
-  padding: 15px 0;
+  padding: 10px 0;
 }
 
 li a{
-  text-decoration: none;
   color: white;
 }

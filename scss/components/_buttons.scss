@@ -1,0 +1,61 @@
+.back{
+  position: absolute;
+  padding: 21px;
+  top: 0;
+  left: 0;
+}
+
+/*Bouton de navigation*/
+
+.action-btn{
+  display: flex;
+  flex-direction: column;
+}
+
+.action-btn__order{
+  border-radius: 16px;
+  padding: 2px 6px 2px 6px;
+  background: blueviolet;
+  position: relative;
+  top: 45px;
+  left: -11px;
+  color: white;
+  width: fit-content;
+  height: auto;
+}
+
+.action-btn__title{
+  border-radius: 20px;
+  padding:25px 0;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  background-color: #F6F6F6;
+  box-shadow: 0 3px 20px #c9c9c9;
+}
+
+.nav-icon{
+  padding-left: 32px;
+  padding-right: 20px;
+  color: #7E7E7E;
+}
+
+/*Bouton rond coloré*/
+
+.command-btn{
+  display: flex;
+  justify-content: center;
+  padding: 25px 0 70px 0;
+}
+
+.btn-rounded{
+  border-radius: 50px;
+  padding: 15px 0;
+  font-size: medium;
+  color: white;
+  box-shadow: 1px 3px 20px #909090;
+  width: 215px;
+  background: linear-gradient(180deg, rgba(235,114,218,1) 0%, rgba(180,97,220,1) 100%);
+  align-self: center;
+  text-align: center;
+}

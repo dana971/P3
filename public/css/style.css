@@ -1,11 +1,8 @@
 @charset "UTF-8";
-* {
-  box-sizing: border-box;
-}
-
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -16,48 +13,86 @@ h1 {
   margin: 0;
 }
 
-h2 {
+h3 {
   font-size: 25px;
   font-weight: 700;
 }
 
-h3 {
+h4 {
   margin: 0;
+}
+
+.fa-solid {
+  padding-right: 10px;
+}
+
+.resto__name {
+  font-family: shrikhand, serif;
+}
+
+.menu-name {
+  font-weight: lighter;
+  border-bottom: 5px solid #99E2D0;
+  width: 65px;
+  margin: 0;
+  padding-bottom: 4px;
+}
+
+.head {
+  display: flex;
+  justify-content: center;
 }
 
 nav {
   padding: 0 20px;
 }
 
-.box_btn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px 0;
+.back {
+  position: absolute;
+  padding: 21px;
+  top: 0;
+  left: 0;
 }
 
-.order {
+/*Bouton de navigation*/
+.action-btn {
+  display: flex;
+  flex-direction: column;
+}
+
+.action-btn__order {
   border-radius: 16px;
   padding: 2px 6px 2px 6px;
   background: blueviolet;
   position: relative;
-  top: 40px;
+  top: 45px;
   left: -11px;
   color: white;
   width: fit-content;
   height: auto;
 }
 
-.btn {
+.action-btn__title {
   border-radius: 20px;
-  padding: 19px;
-  font-size: 14px;
+  padding: 25px 0;
+  font-size: 16px;
+  font-weight: bold;
   width: 100%;
-  box-shadow: 0 3px 20px #dddddd;
+  background-color: #F6F6F6;
+  box-shadow: 0 3px 20px #c9c9c9;
 }
 
-.fa-solid {
-  padding-right: 10px;
+.nav-icon {
+  padding-left: 32px;
+  padding-right: 20px;
+  color: #7E7E7E;
+}
+
+/*Bouton rond coloré*/
+.command-btn {
+  display: flex;
+  justify-content: center;
+  padding: 25px 0 70px 0;
 }
 
 .btn-rounded {
@@ -72,70 +107,15 @@ nav {
   text-align: center;
 }
 
-.btn__validate {
-  display: none;
-}
-
-.listing {
-  text-decoration: none;
-  padding-bottom: 30px;
-  padding: 0 20px;
-}
-
-.main {
+.main-plate {
   display: flex;
   flex-direction: column;
   padding: 0 20px;
-  background-color: #EAEAEA;
+  background-color: #F6F6F6;
   border-radius: 45px 45px 0 0; /*a partir de cette ligne ajout pour la page 2 */
-  position: relative;
-  z-index: 2;
-  top: 210px;
+  transform: translateY(-40px);
 }
 
-a {
-  text-decoration: none;
-  padding-bottom: 30px;
-}
-
-.card_section {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.card {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.card-img {
-  width: 100%;
-  height: 150px;
-  border-radius: 20px 20px 0 0;
-  object-fit: cover;
-}
-
-.card_body {
-  padding: 11px;
-  border: white;
-  background-color: white;
-  font-size: 11px;
-  border-radius: 0 0 15px 15px;
-  box-shadow: 2px 2px lightgrey;
-  color: black;
-  display: flex;
-  justify-content: space-between;
-}
-
-.card_body > p {
-  margin-bottom: 0px;
-  margin-top: 3px;
-  font-weight: lighter;
-}
-
-/*CSS PAGE 2 - TRI A FAIRE */
 .resto {
   display: flex;
   justify-content: space-between;
@@ -144,9 +124,12 @@ a {
 
 .resto-prev {
   display: flex;
-  position: absolute;
-  z-index: 1;
   width: 100%;
+}
+@media screen and (min-width: 1200px) {
+  .resto-prev {
+    position: relative;
+  }
 }
 
 .resto-prev img {
@@ -155,45 +138,40 @@ a {
   width: 100%;
 }
 
-.btn-content {
-  display: flex;
-  flex-direction: column;
-}
-
-.btn-content__text {
-  display: flex;
-  justify-content: space-between;
-}
-
-.menu-entry {
-  padding: 25px 0;
+.menu {
+  padding: 25px 0 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.head {
+.btn {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 3px 20px #c9c9c9;
 }
 
-.back {
-  position: absolute;
-  padding: 21px;
-  top: 0;
-  left: 0;
-}
-
-/*.btn-flex{
+.btn__text {
   display: flex;
   justify-content: space-between;
+  font-weight: lighter;
 }
-Cette classe n'est plus utilisée - a voir pour supp'
-*/
+
+.price {
+  font-weight: normal;
+}
+
+.btn__validate {
+  display: none;
+}
+
 footer {
   background-color: #353535;
   color: #FFFFFF;
-  list-style-type: none;
+  margin-top: -40px;
 }
 
 ul {
@@ -203,18 +181,16 @@ ul {
 
 li {
   list-style-type: none;
-  margin-bottom: 5px;
-  padding-bottom: 15px;
+  padding-bottom: 11px;
 }
 
-li h2 {
+li h3 {
   font-family: "Shrikhand", cursive;
   margin: 0;
-  padding: 15px 0;
+  padding: 10px 0;
 }
 
 li a {
-  text-decoration: none;
   color: white;
 }
 
@@ -244,6 +220,54 @@ li a {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.listing {
+  text-decoration: none;
+  padding-bottom: 30px;
+  padding: 0 20px;
+}
+
+.card_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+a {
+  text-decoration: none;
+  padding-bottom: 30px;
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-img {
+  width: 100%;
+  height: 150px;
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
+}
+
+.card_body {
+  padding: 11px;
+  border: white;
+  background-color: white;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 2px 2px lightgrey;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card_body > p {
+  margin-bottom: 0px;
+  margin-top: 3px;
+  font-weight: lighter;
 }
 
 /*# sourceMappingURL=style.css.map */

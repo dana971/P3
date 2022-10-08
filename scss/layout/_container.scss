@@ -1,0 +1,59 @@
+.main-plate{
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  background-color:#F6F6F6;
+  border-radius: 45px 45px 0 0 ; /*a partir de cette ligne ajout pour la page 2 */
+  transform: translateY(-40px);
+}
+
+.resto{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+}
+
+.resto-prev{
+  display:flex;
+  width: 100%;
+  @include desktop {
+    position: relative;
+  }
+}
+
+.resto-prev img{
+  object-fit: fill;
+  height: 260px;
+  width: 100%;
+}
+
+.menu{
+  padding: 25px 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.btn{
+  display:flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  border-radius:10px;
+  padding: 10px;
+  box-shadow: 0 3px 20px #c9c9c9;
+}
+
+.btn__text{
+  display:flex;
+  justify-content: space-between;
+  font-weight: lighter;
+}
+
+.price{
+  font-weight: normal;
+}
+
+.btn__validate{
+  display:none;
+}

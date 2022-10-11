@@ -4,6 +4,12 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
+@media screen and (min-width: 992px) {
+  body {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
 
 h1 {
   font-family: "Shrikhand", cursive;
@@ -58,6 +64,7 @@ nav {
 .action-btn {
   display: flex;
   flex-direction: column;
+  margin-left: 12px;
 }
 
 .action-btn__order {
@@ -115,6 +122,13 @@ nav {
   border-radius: 45px 45px 0 0; /*a partir de cette ligne ajout pour la page 2 */
   transform: translateY(-40px);
 }
+@media screen and (min-width: 767px) {
+  .main-plate {
+    padding: 35px 120px 0;
+    border-radius: 90px 90px 0 0;
+    top: -84px;
+  }
+}
 
 .resto {
   display: flex;
@@ -126,7 +140,7 @@ nav {
   display: flex;
   width: 100%;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 992px) {
   .resto-prev {
     position: relative;
   }
@@ -137,12 +151,23 @@ nav {
   height: 260px;
   width: 100%;
 }
+@media screen and (min-width: 767px) {
+  .resto-prev img {
+    object-fit: cover;
+    height: 370px;
+  }
+}
 
 .menu {
   padding: 25px 0 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+@media screen and (min-width: 767px) {
+  .menu {
+    flex-direction: row;
+  }
 }
 
 .btn {
@@ -224,8 +249,17 @@ li a {
 
 .listing {
   text-decoration: none;
-  padding-bottom: 30px;
-  padding: 0 20px;
+  padding: 0 20px 30px;
+}
+@media screen and (min-width: 767px) {
+  .listing {
+    background-color: #FF79DA;
+  }
+}
+@media screen and (min-width: 992px) {
+  .listing {
+    background-color: green;
+  }
 }
 
 .card_section {

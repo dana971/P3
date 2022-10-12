@@ -14,6 +14,10 @@ h1{
   text-align: center;
   padding: 12px;
   margin: 0;
+  @include tablet-only {
+    font-size: 33px;
+    margin: 12px;
+  }
 }
 
 h3{

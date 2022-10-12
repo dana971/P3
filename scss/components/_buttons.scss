@@ -7,10 +7,22 @@
 
 /*Bouton de navigation*/
 
+.action{
+
+  @include tablet {
+    display: flex;
+    justify-content:space-between;
+  }
+}
+
 .action-btn{
   display: flex;
   flex-direction: column;
   margin-left: 12px;
+  @include tablet {
+    display: block;
+    width:30%;
+  }
 }
 
 .action-btn__order{
@@ -33,12 +45,19 @@
   width: 100%;
   background-color: #F6F6F6;
   box-shadow: 0 3px 20px #c9c9c9;
+  @include tablet-only {
+    font-size: 15px;
+  }
 }
 
 .nav-icon{
   padding-left: 32px;
   padding-right: 20px;
   color: #7E7E7E;
+  @include tablet-only{
+    padding-left: 21px;
+    padding-right: 9px;
+  }
 }
 
 /*Bouton rond coloré*/

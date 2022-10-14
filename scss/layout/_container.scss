@@ -6,9 +6,11 @@
   border-radius: 45px 45px 0 0 ; /*a partir de cette ligne ajout pour la page 2 */
   transform: translateY(-40px);
   @include desktop {
-    padding: 35px 120px 0;
+    padding: 35px 120px 32px;
     border-radius: 90px 90px 0 0;
-    top: -84px;
+    transform: translateY(-77px);
+    max-width: 1200px;
+    margin: 0 auto;
   }
 }
 
@@ -37,13 +39,21 @@
   }
 }
 
+.box-menu{
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .menu{
   padding: 25px 0 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   @include desktop{
-  flex-direction: row;
+    gap: 25px;
+    width: 30%;
   }
 }
 
@@ -54,6 +64,9 @@
   border-radius:10px;
   padding: 10px;
   box-shadow: 0 3px 20px #c9c9c9;
+  @include desktop {
+    height: 77px;
+  }
 }
 
 .btn__text{

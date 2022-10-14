@@ -3,6 +3,10 @@
   padding: 21px;
   top: 0;
   left: 0;
+  @include desktop{
+    position: relative;
+    left: 15px;
+  }
 }
 
 /*Bouton de navigation*/

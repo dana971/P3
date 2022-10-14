@@ -4,12 +4,6 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
-@media screen and (min-width: 992px) {
-  body {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-}
 
 h1 {
   font-family: "Shrikhand", cursive;
@@ -58,12 +52,23 @@ h4 {
 nav {
   padding: 10px 20px 50px;
 }
+@media screen and (min-width: 992px) {
+  nav {
+    padding: 10px 120px 50px;
+  }
+}
 
 .back {
   position: absolute;
   padding: 21px;
   top: 0;
   left: 0;
+}
+@media screen and (min-width: 992px) {
+  .back {
+    position: relative;
+    left: 15px;
+  }
 }
 
 /*Bouton de navigation*/
@@ -152,11 +157,13 @@ nav {
   border-radius: 45px 45px 0 0; /*a partir de cette ligne ajout pour la page 2 */
   transform: translateY(-40px);
 }
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 992px) {
   .main-plate {
-    padding: 35px 120px 0;
+    padding: 35px 120px 32px;
     border-radius: 90px 90px 0 0;
-    top: -84px;
+    transform: translateY(-77px);
+    max-width: 1200px;
+    margin: 0 auto;
   }
 }
 
@@ -188,15 +195,23 @@ nav {
   }
 }
 
+@media screen and (min-width: 992px) {
+  .box-menu {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .menu {
   padding: 25px 0 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 992px) {
   .menu {
-    flex-direction: row;
+    gap: 25px;
+    width: 30%;
   }
 }
 
@@ -207,6 +222,11 @@ nav {
   border-radius: 10px;
   padding: 10px;
   box-shadow: 0 3px 20px #c9c9c9;
+}
+@media screen and (min-width: 992px) {
+  .btn {
+    height: 77px;
+  }
 }
 
 .btn__text {
@@ -227,6 +247,11 @@ footer {
   background-color: #353535;
   color: #FFFFFF;
   margin-top: -40px;
+}
+@media screen and (min-width: 992px) {
+  footer.footer-resto {
+    margin-top: -73px;
+  }
 }
 
 ul {
@@ -289,20 +314,20 @@ li a {
 }
 @media screen and (min-width: 992px) {
   .listing {
-    background-color: green;
+    padding: 30px 60px 30px;
   }
 }
 
 .card_section {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  align-items: center;
 }
-@media screen and (min-width: 767px) and (max-width: 992px) {
+@media screen and (min-width: 767px) {
   .card_section {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 }
 
@@ -317,10 +342,16 @@ a {
   box-shadow: 0px 5px 10px #e2e2e2;
   margin-bottom: 35px;
   border-radius: 20px;
+  max-width: 375px;
 }
 @media screen and (min-width: 767px) {
   .card {
     width: 48%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .card {
+    width: 450px;
   }
 }
 

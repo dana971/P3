@@ -1,4 +1,37 @@
 @charset "UTF-8";
+.spinner {
+  height: 100vh;
+  position: fixed;
+  opacity: 0.9;
+  background-color: white;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.spinner i {
+  animation: rotation 3s 2s ease-in-out;
+  padding: 0;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+@keyframes spinner {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -285,14 +318,14 @@ nav {
   position: relative;
   z-index: 1;
 }
-.fa-heart:hover {
+.fa-heart:active {
   opacity: 1;
   font-weight: bold;
+  color: rgb(235, 114, 218);
 }
 .fa-heart::after {
-  background-color: pink;
   opacity: 0;
-  background-color: linear-gradient(180deg, rgb(235, 114, 218) 0%, rgb(180, 97, 220) 100%);
+  color: rgb(235, 114, 218);
 }
 
 footer {

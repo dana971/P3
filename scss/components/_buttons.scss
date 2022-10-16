@@ -3,19 +3,31 @@
   padding: 21px;
   top: 0;
   left: 0;
-  @include desktop{
+  @include tablet {
     position: relative;
-    left: 15px;
+    left: 10px;
+    top: 4px;
+  }
+}
+
+.fa-arrow-left{
+  @include tablet{
+    font-size: x-large;
   }
 }
 
 /*Bouton de navigation*/
 
 .action{
-
+  max-width:380px;
+  margin: 0 auto;
   @include tablet {
     display: flex;
     justify-content:space-between;
+    max-width: unset;
+  }
+  @include desktop{
+    max-width: 1200px;
   }
 }
 
@@ -49,6 +61,10 @@
   width: 100%;
   background-color: #F6F6F6;
   box-shadow: 0 3px 20px #c9c9c9;
+  &:hover {
+      background-color: $colour-primary;
+    }
+
   @include tablet-only {
     font-size: 15px;
   }

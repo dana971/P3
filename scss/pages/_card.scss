@@ -8,6 +8,14 @@
   }
 }
 
+
+.sublist{
+  @include desktop {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
 .card_section{
   display: flex;
   flex-direction: column;
@@ -37,7 +45,7 @@ a{
     width: 48%;
   }
   @include desktop {
-    width: 450px;
+    max-width: unset;
   }
 }
 

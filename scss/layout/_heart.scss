@@ -1,0 +1,13 @@
+.fa-heart{
+  position: relative;
+  z-index: 1;
+  &:hover{
+    opacity: 1;
+    font-weight: bold;
+  }
+  &::after{
+    background-color:pink;
+    opacity: 0;
+    background-color: $colour-gradient;
+  }
+}

@@ -2,16 +2,34 @@ footer{
   background-color:#353535;
   color:#FFFFFF;
   margin-top: -40px;
+  @include tablet{
+    padding: 30px;
+  }
   &.footer-resto{
+    @include tablet{
+      padding: 30px;
+    }
     @include desktop{
       margin-top:-73px;
     }
   }
 }
 
+.container{
+  @extend .frame
+}
+
 ul{
   margin: 0;
-  padding: 20px;
+  padding: 0;
+  @include tablet{
+    display: flex;
+    align-items: self-end;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
 }
 
 li{
@@ -19,7 +37,7 @@ li{
   padding-bottom: 11px;
 }
 
-li h3{
+.footer-title{
   font-family: 'Shrikhand', cursive;
   margin:0;
   padding: 10px 0;

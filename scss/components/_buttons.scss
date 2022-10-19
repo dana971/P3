@@ -63,6 +63,7 @@
   box-shadow: 0 3px 20px #c9c9c9;
   &:hover {
       background-color: $colour-primary;
+      box-shadow: 0 3px 20px #bfbec0;
     }
 
   @include tablet-only {

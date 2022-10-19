@@ -8,9 +8,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: hide 3s 1s ease-out forwards;
   & i {
-    animation: rotation 3s 2s ease-in-out;
     padding: 0;
+    animation: rotation 3s ease-in-out;
   }
 }
 
@@ -23,16 +24,21 @@
 
   100% {
     transform: rotate(359deg);
+    opacity: 0;
   }
 }
 
-@keyframes spinner {
+@keyframes hide {
 
-  from{
-    opacity: 1;
+  from {
+    opacity: 0.9;
   }
 
-  to{
-    opacity:0;
+  to {
+    opacity: 0;
+    visibility: hidden;
   }
 }
+
+
+

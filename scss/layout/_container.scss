@@ -69,6 +69,10 @@
   @include desktop {
     height: 50px;
   }
+  &:hover{
+    color:$colour-tertiary;
+  }
+
 }
 
 .btn__text{
@@ -85,5 +89,15 @@
 }
 
 .btn__validate{
-  display:none;
+  /*display:none;*/
+  background-color: aquamarine;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 10px 10px 0;
+}
+
+.btn__body{
+  width:100% ;
 }

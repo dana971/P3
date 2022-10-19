@@ -1,13 +1,18 @@
-.fa-heart{
-  position: relative;
-  z-index: 1;
-  &:active{
+.fa-coeur{
+  //position: relative;
+  font-size: 30px;
+  color: #444444;
+
+  &:hover, &:active{
     opacity: 1;
     font-weight: bold;
-    color:$colour-gradient;
+    background: -webkit-linear-gradient(pink,violet,orange);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
   }
-  &::after{
+  /*&::after{
     opacity: 0;
     color:$colour-gradient;
-  }
+  }*/
 }

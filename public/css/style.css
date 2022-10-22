@@ -35,6 +35,16 @@
     visibility: hidden;
   }
 }
+@keyframes slide {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -295,6 +305,38 @@ nav {
   padding: 10px;
   box-shadow: 0 3px 20px #c9c9c9;
   justify-content: space-between;
+  opacity: 0;
+  animation: slide 2s forwards;
+}
+.btn--1 {
+  animation-delay: 0.2s;
+}
+.btn--2 {
+  animation-delay: 0.4s;
+}
+.btn--3 {
+  animation-delay: 0.6s;
+}
+.btn--4 {
+  animation-delay: 0.8s;
+}
+.btn--5 {
+  animation-delay: 1s;
+}
+.btn--6 {
+  animation-delay: 1.2s;
+}
+.btn--7 {
+  animation-delay: 1.4s;
+}
+.btn--8 {
+  animation-delay: 1.6s;
+}
+.btn--9 {
+  animation-delay: 1.8s;
+}
+.btn--10 {
+  animation-delay: 2s;
 }
 .btn:hover .btn__validate {
   visibility: visible;

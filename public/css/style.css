@@ -287,24 +287,27 @@ nav {
 
 .btn {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background-color: #FFFFFF;
   border-radius: 10px;
   padding: 10px;
   box-shadow: 0 3px 20px #c9c9c9;
+  justify-content: space-between;
 }
 @media screen and (min-width: 992px) {
   .btn {
     height: 50px;
   }
 }
-.btn:hover {
-  color: #99E2D0;
+.btn:hover .btn__validate {
+  visibility: visible;
+}
+.btn:hover .price {
+  margin: 0 10px;
 }
 
 .btn__text {
-  display: flex;
-  justify-content: space-between;
+  width: 85%;
   font-weight: lighter;
 }
 @media screen and (min-width: 992px) {
@@ -318,13 +321,15 @@ nav {
 }
 
 .btn__validate {
-  /*display:none;*/
   background-color: aquamarine;
   width: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 0 10px 10px 0;
+  margin: -10px;
+  visibility: collapse;
+  color: white;
 }
 
 .btn__body {

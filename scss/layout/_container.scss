@@ -61,23 +61,29 @@
 
 .btn{
   display:flex;
-  flex-direction: column;
+  flex-direction: row;
   background-color: #FFFFFF;
   border-radius:10px;
   padding: 10px;
   box-shadow: 0 3px 20px #c9c9c9;
+  justify-content: space-between;
   @include desktop {
     height: 50px;
   }
-  &:hover{
-    color:$colour-tertiary;
-  }
 
+  &:hover {
+    & .btn__validate {
+      visibility: visible;
+    }
+    & .price {
+      margin:0 10px;
+    }
+
+  }
 }
 
 .btn__text{
-  display:flex;
-  justify-content: space-between;
+  width:85%;
   font-weight: lighter;
   @include desktop {
     line-height: 30px;
@@ -89,14 +95,17 @@
 }
 
 .btn__validate{
-  /*display:none;*/
   background-color: aquamarine;
   width: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 0 10px 10px 0;
+  margin: -10px;
+  visibility: collapse;
+  color: white;
 }
+
 
 .btn__body{
   width:100% ;

@@ -60,11 +60,16 @@
   font-weight: bold;
   width: 100%;
   background-color: #F6F6F6;
-  box-shadow: 0 3px 20px #c9c9c9;
+  box-shadow:  0 6px 10px #d5d5d5;
+
   &:hover {
-      background-color: $colour-primary;
-      box-shadow: 0 3px 20px #bfbec0;
+    background-color:#f5edff;
+    box-shadow: 0 8px 15px #c4c0c0;
+
+    & .nav-icon {
+      color: $colour-primary;
     }
+  }
 
   @include tablet-only {
     font-size: 15px;

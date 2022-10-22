@@ -8,10 +8,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: hide 3s 1s ease-out forwards;
+  animation: hide 2s 1s ease-out forwards;
   & i {
     padding: 0;
-    animation: rotation 3s ease-in-out;
+    animation: rotation 3s linear;
   }
 }
 
@@ -23,7 +23,7 @@
   }
 
   100% {
-    transform: rotate(359deg);
+    transform: rotate(720deg);
     opacity: 0;
   }
 }

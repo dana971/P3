@@ -9,11 +9,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: hide 3s 1s ease-out forwards;
+  animation: hide 2s 1s ease-out forwards;
 }
 .spinner i {
   padding: 0;
-  animation: rotation 3s ease-in-out;
+  animation: rotation 3s linear;
 }
 
 @keyframes rotation {
@@ -22,7 +22,7 @@
     opacity: 1;
   }
   100% {
-    transform: rotate(359deg);
+    transform: rotate(720deg);
     opacity: 0;
   }
 }
@@ -174,11 +174,14 @@ nav {
   font-weight: bold;
   width: 100%;
   background-color: #F6F6F6;
-  box-shadow: 0 3px 20px #c9c9c9;
+  box-shadow: 0 6px 10px #d5d5d5;
 }
 .action-btn__title:hover {
-  background-color: #9356DC;
-  box-shadow: 0 3px 20px #bfbec0;
+  background-color: #f5edff;
+  box-shadow: 0 8px 15px #c4c0c0;
+}
+.action-btn__title:hover .nav-icon {
+  color: #9356DC;
 }
 @media screen and (min-width: 767px) and (max-width: 992px) {
   .action-btn__title {
@@ -227,9 +230,9 @@ nav {
 }
 @media screen and (min-width: 992px) {
   .main-plate {
-    padding: 35px 120px 32px;
+    padding: 35px 60px 32px;
     border-radius: 90px 90px 0 0;
-    transform: translateY(-77px);
+    transform: translateY(-73px);
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -269,8 +272,7 @@ nav {
     justify-content: space-between;
   }
 }
-
-.menu {
+.box-menu .menu {
   padding: 25px 0 20px;
   display: flex;
   flex-direction: column;
@@ -279,7 +281,7 @@ nav {
   max-width: 500px;
 }
 @media screen and (min-width: 992px) {
-  .menu {
+  .box-menu .menu {
     gap: 25px;
     width: 30%;
   }
@@ -294,46 +296,64 @@ nav {
   box-shadow: 0 3px 20px #c9c9c9;
   justify-content: space-between;
 }
+.btn:hover .btn__validate {
+  visibility: visible;
+}
+.btn:hover .btn__validate i {
+  transition: transform 500ms ease-in-out;
+  transform: rotate(0turn);
+}
+.btn:hover .price {
+  margin: 0 10px;
+}
 @media screen and (min-width: 992px) {
   .btn {
     height: 50px;
   }
 }
-.btn:hover .btn__validate {
-  visibility: visible;
+
+.btn__validate {
+  background-color: #99E2D0;
+  min-width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 10px 10px 0;
+  margin: -10px -10px -10px 0;
+  visibility: collapse;
+  color: white;
 }
-.btn:hover .price {
-  margin: 0 10px;
+.btn__validate .validation {
+  padding-left: 10px;
+  font-size: larger;
+  transform: rotate(-1turn);
 }
 
-.btn__text {
-  width: 85%;
+.btn__text, .btn__title {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+div.btn__text, div.btn__title {
+  width: 90%;
   font-weight: lighter;
 }
-@media screen and (min-width: 992px) {
-  .btn__text {
-    line-height: 30px;
+div.btn__text .text, div.btn__title .text {
+  font-size: 14px;
+}
+@media screen and (min-width: 1325px) {
+  div.btn__text, div.btn__title {
+    line-height: 25px;
+  }
+  div.btn__text .text, div.btn__title .text {
+    font-size: 16px;
   }
 }
 
 .price {
   font-weight: normal;
-}
-
-.btn__validate {
-  background-color: aquamarine;
-  width: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0 10px 10px 0;
-  margin: -10px;
-  visibility: collapse;
-  color: white;
-}
-
-.btn__body {
-  width: 100%;
+  align-self: center;
 }
 
 .fa-coeur {

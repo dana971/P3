@@ -75,6 +75,7 @@
             animation-delay: $anim-delay * $i;
         }
     }
+
     &:hover {
         & .btn__validate {
             visibility: visible;

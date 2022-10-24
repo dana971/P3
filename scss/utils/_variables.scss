@@ -1,7 +1,9 @@
+@use "sass:math";
+
 $colour-primary: #9356DC;
 $colour-secondary: #FF79DA;
 $colour-tertiary: #99E2D0;
 $colour-gradient: rgb(235,114,218);
 $num-btn:10;
 $anim-dur:2s;
-$anim-delay:$anim-dur / $num-btn;
+$anim-delay:math.div($anim-dur, $num-btn);

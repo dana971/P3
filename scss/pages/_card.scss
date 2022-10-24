@@ -41,6 +41,7 @@ a{
   margin-bottom: 35px;
   border-radius: 20px;
   max-width: 375px;
+  position:relative;
   @include tablet {
     width: 48%;
   }
@@ -73,3 +74,13 @@ a{
   font-weight: lighter;
 }
 
+.tag{
+  position: absolute;
+  background-color: $colour-tertiary;
+  top: 25px;
+  right: 12px;
+  color: #31a489;
+  padding: 3px;
+  border-radius: 2px;
+  box-shadow: 0 0px 2px #c4c0c0;
+}

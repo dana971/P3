@@ -1,21 +1,4 @@
 @charset "UTF-8";
-.spinner {
-  height: 100vh;
-  position: fixed;
-  opacity: 0.9;
-  background-color: white;
-  width: 100%;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: hide 2s 1s ease-out forwards;
-}
-.spinner i {
-  padding: 0;
-  animation: rotation 3s linear;
-}
-
 @keyframes rotation {
   0% {
     transform: rotate(0deg);
@@ -43,6 +26,17 @@
   100% {
     transform: translateY(0px);
     opacity: 1;
+  }
+}
+@keyframes heart {
+  0% {
+    transform: scale(0);
+  }
+  90% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 body {
@@ -78,7 +72,7 @@ h4 {
   margin: 0;
 }
 
-.fa-solid {
+.footer-icon {
   padding-right: 10px;
 }
 
@@ -97,6 +91,23 @@ h4 {
 .frame, .container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.spinner {
+  height: 100vh;
+  position: fixed;
+  opacity: 0.9;
+  background-color: white;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: hide 2s 1s ease-out forwards;
+}
+.spinner i {
+  padding: 0;
+  animation: rotation 3s linear;
 }
 
 .head {
@@ -400,19 +411,33 @@ div.btn__text .text, div.btn__title .text {
 
 .fa-coeur {
   font-size: 30px;
-  color: #444444;
-  /*&::after{
-    opacity: 0;
-    color:$colour-gradient;
-  }*/
+  position: relative;
+  left: 34px;
 }
-.fa-coeur:hover, .fa-coeur:active {
-  opacity: 1;
-  font-weight: bold;
-  background: -webkit-linear-gradient(pink, violet, orange);
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
+@media screen and (min-width: 767px) {
+  .fa-coeur {
+    font-size: 35px;
+    left: -16px;
+  }
+}
+
+.fa-coeur-filled {
+  font-size: 32px;
+  position: relative;
+  transform: scale(0);
+  color: rgb(235, 114, 218);
+  top: 1px;
+  right: 1px;
+}
+@media screen and (min-width: 767px) {
+  .fa-coeur-filled {
+    font-size: 37px;
+    right: 56px;
+  }
+}
+
+.like:hover .fa-coeur-filled {
+  animation: heart 800ms ease-in-out forwards;
 }
 
 footer {
@@ -544,6 +569,7 @@ a {
   margin-bottom: 35px;
   border-radius: 20px;
   max-width: 375px;
+  position: relative;
 }
 @media screen and (min-width: 767px) {
   .card {
@@ -577,6 +603,17 @@ a {
   margin-bottom: 0px;
   margin-top: 3px;
   font-weight: lighter;
+}
+
+.tag {
+  position: absolute;
+  background-color: #99E2D0;
+  top: 25px;
+  right: 12px;
+  color: #31a489;
+  padding: 3px;
+  border-radius: 2px;
+  box-shadow: 0 0px 2px #c4c0c0;
 }
 
 /*# sourceMappingURL=style.css.map */

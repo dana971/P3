@@ -1,0 +1,16 @@
+.spinner {
+    height: 100vh;
+    position: fixed;
+    opacity: 0.9;
+    background-color: white;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: hide 2s 1s ease-out forwards;
+    & i {
+        padding: 0;
+        animation: rotation 3s linear;
+    }
+}

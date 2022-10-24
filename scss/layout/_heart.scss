@@ -1,20 +1,29 @@
 .fa-coeur{
-  //position: relative;
   font-size: 30px;
-  color: #444444;
-
-  &:hover, &:active{
-    opacity: 1;
-    font-weight: bold;
-    background: -webkit-linear-gradient(pink,violet,orange);
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
+  position: relative;
+  left: 34px;
+  @include tablet {
+    font-size: 35px;
+    left:-16px;
   }
-  /*&::after{
-    opacity: 0;
-    color:$colour-gradient;
-  }*/
 }
 
+.fa-coeur-filled{
+  font-size: 32px;
+  position: relative;
+  transform: scale(0);
+  color: rgb(235,114,218);
+  top: 1px;
+  right:1px;
+  @include tablet {
+    font-size: 37px;
+    right: 56px;
+  }
+}
+
+.like:hover{
+  & .fa-coeur-filled{
+    animation: heart 800ms ease-in-out forwards;
+  }
+}
 

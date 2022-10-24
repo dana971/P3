@@ -68,7 +68,7 @@
   padding: 10px;
   box-shadow: 0 3px 20px #c9c9c9;
   justify-content: space-between;
-    opacity: 0;
+  opacity: 0;
   animation: slide $anim-dur forwards;
     @for $i from 1 through $num-btn{
         &--#{$i} {

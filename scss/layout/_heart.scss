@@ -4,7 +4,10 @@
   left: 34px;
   @include tablet {
     font-size: 35px;
-    left:-16px;
+    left:35px;
+  }
+  @include desktop{
+    left:26px;
   }
 }
 
@@ -12,18 +15,35 @@
   font-size: 32px;
   position: relative;
   transform: scale(0);
-  color: rgb(235,114,218);
+  background-image: linear-gradient($colour-primary, $colour-secondary);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   top: 1px;
   right:1px;
   @include tablet {
     font-size: 37px;
-    right: 56px;
+    right: 5px;
+  }
+  @include desktop{
+    left:-14px;
   }
 }
 
 .like:hover{
   & .fa-coeur-filled{
     animation: heart 800ms ease-in-out forwards;
+  }
+}
+
+.like{
+  position: relative;
+  bottom: 70px;
+  float: right;
+  right: 8px;
+  @include desktop {
+    position: relative;
+    bottom: 52px;
+    float: right;
   }
 }
 

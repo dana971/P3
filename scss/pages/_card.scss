@@ -10,6 +10,11 @@
 
 
 .sublist{
+  max-width: 380px;
+  margin: 0 auto;
+  @include tablet{
+    max-width: unset;
+  }
   @include desktop {
     max-width: 1200px;
     margin: 0 auto;

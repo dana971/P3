@@ -39,6 +39,7 @@
     transform: scale(1);
   }
 }
+@keyframes slide-in-out {}
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -361,10 +362,11 @@ nav {
 }
 .btn:hover .btn__validate {
   visibility: visible;
+  transform: scaleX(1);
 }
 .btn:hover .btn__validate i {
   transition: transform 500ms ease-in-out;
-  transform: rotate(0turn);
+  transform: rotate(-1turn);
 }
 .btn:hover .price {
   margin: 0 10px;
@@ -385,11 +387,12 @@ nav {
   margin: -10px -10px -10px 0;
   visibility: collapse;
   color: white;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 500ms ease-out;
 }
 .btn__validate .validation {
-  padding-left: 10px;
   font-size: larger;
-  transform: rotate(-1turn);
 }
 
 .btn__text, .btn__title {
@@ -475,6 +478,9 @@ div.btn__text .text, div.btn__title .text {
     float: right;
   }
 }
+.like__menu {
+  position: unset;
+}
 
 footer {
   background-color: #353535;
@@ -498,9 +504,6 @@ footer {
   }
 }
 
-/*.container{
-  @extend .frame
-} */
 ul {
   margin: 0;
   padding: 0;

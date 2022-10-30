@@ -17,6 +17,7 @@
   transform: scale(0);
   background-image: linear-gradient($colour-primary, $colour-secondary);
   background-clip: text;
+
   -webkit-text-fill-color: transparent;
   top: 1px;
   right:1px;
@@ -44,6 +45,9 @@
     position: relative;
     bottom: 52px;
     float: right;
+  }
+  &__menu{
+    position: unset;
   }
 }
 

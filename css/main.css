@@ -18,6 +18,16 @@
     visibility: hidden;
   }
 }
+@keyframes slide {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 @keyframes heart {
   0% {
     transform: scale(0);
@@ -27,16 +37,6 @@
   }
   100% {
     transform: scale(1);
-  }
-}
-@keyframes slide {
-  0% {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
   }
 }
 @keyframes slide-in-out {}
@@ -244,13 +244,12 @@ nav {
   color: white;
   box-shadow: 1px 3px 20px #909090;
   width: 215px;
-  background: linear-gradient(180deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  background: linear-gradient(180deg, rgb(235, 114, 218) 0%, rgb(180, 97, 220) 100%);
   align-self: center;
   text-align: center;
 }
 .btn-rounded:hover {
   box-shadow: 1px 5px 20px #615e5e;
-  background: linear-gradient(180deg, rgb(247, 140, 217) 0%, rgba(141, 82, 211, 0.85) 100%);
 }
 
 .main-plate {
@@ -683,4 +682,4 @@ a {
   box-shadow: 0 0px 2px #c4c0c0;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=main.css.map */

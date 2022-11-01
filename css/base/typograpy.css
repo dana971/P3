@@ -1,0 +1,18 @@
+.resto__name {
+  font-family: shrikhand, serif;
+}
+
+.menu-name {
+  font-weight: lighter;
+  border-bottom: 5px solid #99E2D0;
+  width: 65px;
+  margin: 0;
+  padding-bottom: 4px;
+}
+
+.frame {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=typograpy.css.map */

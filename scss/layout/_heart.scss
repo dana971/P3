@@ -17,7 +17,7 @@
   transform: scale(0);
   background-image: linear-gradient($colour-primary, $colour-secondary);
   background-clip: text;
-
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   top: 1px;
   right:1px;
@@ -30,11 +30,15 @@
   }
 }
 
-.like:hover{
-  & .fa-coeur-filled{
-    animation: heart 800ms ease-in-out forwards;
+.like, .like__resto{
+  &:hover{ /*Sélectionner les deux sélecteurs +&hover*/
+    & .fa-coeur-filled{
+      animation: heart 800ms ease-in-out forwards;
+    }
   }
 }
+
+
 
 .like{
   position: relative;

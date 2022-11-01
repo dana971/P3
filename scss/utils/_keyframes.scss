@@ -1,45 +1,32 @@
-
+//*Keyframes animation load spinner *//
 @keyframes rotation {
 
-  0%{
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-
-  100% {
-    transform: rotate(720deg);
-    opacity: 0;
-  }
+0%{
+  transform: rotate(0deg);
+  opacity: 1;
 }
+
+100% {
+  transform: rotate(720deg);
+  opacity: 0;
+}
+}
+
+//*Keyframes disparition load spinner*//
 
 @keyframes hide {
 
-  from {
-    opacity: 0.9;
-  }
-
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
+from {
+  opacity: 0.9;
 }
 
-
-@keyframes slide {
-
-  0%{
-    transform: translateY(50px);
-    opacity: 0;
-
-  }
-
-  100%{
-    transform: translateY(0px);
-    opacity: 1;
-  }
-
+to {
+  opacity: 0;
+  visibility: hidden;
+}
 }
 
+//*Keyframes animation coeur *//
 @keyframes heart {
 
   0%{
@@ -54,6 +41,24 @@
   }
 }
 
+//*Keyframes animation des plats *//
+
+@keyframes slide {
+
+0%{
+    transform: translateY(50px);
+    opacity: 0;
+
+  }
+
+100%{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+}
+
+@keyframes heart {
 
 @keyframes slide-in-out {
   to {
@@ -62,5 +67,4 @@
   from {
 
   }
-
 }

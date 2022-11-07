@@ -58,6 +58,9 @@
     }
 }
 
+.btn *{
+    transition: all 450ms ease-in-out;
+}
 
 .btn{
   display:flex;
@@ -85,6 +88,7 @@
         }
         & .price {
             margin:0 10px;
+            width: 20%;
         }
     }
     @include desktop {
@@ -103,7 +107,6 @@
     color: white;
     transform: scaleX(0);
     transform-origin: right;
-    transition: transform 500ms ease-out;
     & .validation{
         font-size: larger;
     }
@@ -137,6 +140,7 @@ div.btn__text{
 .price{
     font-weight: normal;
     align-self: center;
+    width: 0%;
 }
 
 
